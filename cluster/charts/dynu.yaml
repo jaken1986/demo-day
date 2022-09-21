@@ -6,4 +6,4 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1h
-  url: https://anon-software.github.io/cert-manager-webhook-dynu
+  url: https://dopingus.github.io/cert-manager-webhook-dynu
