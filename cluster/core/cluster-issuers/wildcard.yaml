@@ -1,0 +1,15 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: wildcard  # Replace with a name of your choice
+  namespace: cert-manager        # Set a namespace if required
+spec:
+  commonName: "${SECRET_DOMAIN}" # Wildcard Entry for your domain
+  dnsNames:
+    - ${SECRET_DOMAIN}        # List of all (sub)domains that you want to include in the cert
+    - "*.${SECRET_DOMAIN}"
+  issuerRef:
+    name: letsencrypt-dynu-production   # This should match the issuer you defined earlier
+    kind: ClusterIssuer
+  secretName: lab-wildcard # Secret name where the resulting certificate is saved in

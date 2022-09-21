@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: dynu-secret
+    namespace: kube-system
+type: Opaque
+stringData:
+    api-key: ENC[AES256_GCM,data:MVyPQiqJ9xh7pYHxgZtlne1H5iDBKFizbC+4Pvrzbac=,iv:qTdc6W5eUjeJ7z/cAcauTeMv8xmAOJhUywq7L8hJFhw=,tag:rAVCyAda4mxw/IcF0R17oQ==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age100tc6lnl96420a8tm65g0cdje80uec74pjpsnurkl8yy5lyjefkssuelru
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBqUUY1QUNyNXh0MW55M2to
+            bm1aVEdEZHE3VDh6Tm9QRUp3b01SRmMyb2tvCjVqVlM0VERpRHY5VjJBcmlsRmJY
+            U04rR2wvVWVJK2RVMWJIMG5ZODFybEUKLS0tIG1yRkZSZEJGRTBOTmdZNWFlVm1L
+            a0JySWljcjZ1MnZkZE52NC8zZG1FM1EKGZk6YIv5M1+t0if+9RSi3KpjbTV5wa0F
+            nFGIlpt/Mv/SAA2h64BzNOtwNun/n6YiK+72C4ebivHf4Ve/GgbL7A==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-09-01T16:55:11Z"
+    mac: ENC[AES256_GCM,data:huWv4q3l5mgpKVwlFlbhSU/r4Rsvc8llEVhWwLiZEeLEvaqzM25xGtArC3RB5+Y0bPPo/vm447mSLO4KVj3yxHS/Co//EWANcR6Zpr4lbWmai8KBHo9+6IRJG0LoKSXFaaymQFW1JGUx4zo+ZCl+BEEfHjJtpVTXB/954O4r/RE=,iv:pGKBQGoREx4YpXUyGJCqi9fmLjcfoE6kchIW1An0dLE=,tag:xVvQo6q7z6dt1qh4Y3jvYQ==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3

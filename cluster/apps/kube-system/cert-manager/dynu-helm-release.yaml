@@ -1,0 +1,61 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: dynu-webhook
+  namespace: kube-system
+spec:
+  interval: 15m
+  chart:
+    spec:
+      chart: ./deploy/dynu-webhook
+      sourceRef:
+        kind: GitRepository
+        name: cert-manager-webhook-dynu
+        namespace: flux-system
+      interval: 15m
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  values:
+    groupName: ${SECRET_DOMAIN}
+
+    certManager:
+      namespace: kube-system
+      serviceAccountName: cert-manager
+
+    image:
+      repository: docker.io/dopingus/dynu-cert-manager-webhook
+      tag: latest
+      pullPolicy: Always
+
+    nameOverride: ""
+    fullnameOverride: ""
+
+    service:
+      type: ClusterIP
+      port: 443
+
+    secretName:
+      - dynu-secret
+
+    resources: {}
+      # We usually recommend not to specify default resources and to leave this as a conscious
+      # choice for the user. This also increases chances charts run on environments with little
+      # resources, such as Minikube. If you do want to specify resources, uncomment the following
+      # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+      # limits:
+      #  cpu: 100m
+      #  memory: 128Mi
+      # requests:
+      #  cpu: 100m
+      #  memory: 128Mi
+
+    nodeSelector: {}
+
+    tolerations: []
+
+    affinity: {}

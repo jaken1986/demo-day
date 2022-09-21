@@ -1,0 +1,21 @@
+---
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-dynu-production
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: ${SECRET_EMAIL}
+    privateKeySecretRef:
+      name: letsencrypt-dynu-production
+    solvers:
+      - dns01:
+          cnameStrategy: Follow
+          webhook:
+            groupName: ${SECRET_DOMAIN}
+            solverName: dynu
+            config:
+              secretName: dynu-secret
+              zoneName: ${SECRET_DOMAIN}
+              apiUrl: https://api.dynu.com/v2
