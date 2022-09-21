@@ -12,4 +12,4 @@ spec:
   issuerRef:
     name: letsencrypt-dynu-production   # This should match the issuer you defined earlier
     kind: ClusterIssuer
-  secretName: lab-wildcard # Secret name where the resulting certificate is saved in
+  secretName: wildcard # Secret name where the resulting certificate is saved in
