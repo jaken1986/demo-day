@@ -3,7 +3,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: wildcard  # Replace with a name of your choice
-  namespace: cert-manager        # Set a namespace if required
+  namespace: networking        # Set a namespace if required
 spec:
   commonName: "${SECRET_DOMAIN}" # Wildcard Entry for your domain
   dnsNames:
