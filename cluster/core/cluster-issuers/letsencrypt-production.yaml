@@ -13,9 +13,9 @@ spec:
       - dns01:
           cnameStrategy: Follow
           webhook:
-            groupName: "${SECRET_DOMAIN}"
+            groupName: ${SECRET_DOMAIN}
             solverName: dynu
             config:
               secretName: dynu-secret
-              zoneName: "${SECRET_DOMAIN}"
+              zoneName: ${SECRET_DOMAIN}
               apiUrl: https://api.dynu.com/v2
