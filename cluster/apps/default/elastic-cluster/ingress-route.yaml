@@ -11,6 +11,6 @@ spec:
     - match: "Host(`kibana.${SECRET_DOMAIN}`)"
       kind: Rule
       services:
-        - name: elastic-kibana-kb-http
+        - name: kibana-kb-http
           port: 5601
           scheme: https
