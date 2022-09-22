@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: dynu-webhook
-      version: "0.1.2"
+      version: 0.1.2
       sourceRef:
         kind: HelmRepository
         name: cert-manager-dynu-webhook
