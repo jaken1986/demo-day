@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
   - bitnami.yaml
   - bjw-s.yaml
+  - descheduler-chart.yaml
   - dynu.yaml
   - gitea-charts.yaml
   - jetstack.yaml
