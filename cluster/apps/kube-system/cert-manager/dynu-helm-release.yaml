@@ -8,9 +8,10 @@ spec:
   interval: 15m
   chart:
     spec:
-      chart: ./deploy/dynu-webhook
+      chart: dynu-webhook
+      version: v0.1.2
       sourceRef:
-        kind: GitRepository
+        kind: HelmRepository
         name: cert-manager-webhook-dynu
         namespace: flux-system
       interval: 15m
