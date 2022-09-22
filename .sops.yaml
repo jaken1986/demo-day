@@ -4,12 +4,12 @@ creation_rules:
     encrypted_regex: "^(data|stringData)$"
     key_groups:
       - age:
-          - age15uzrw396e67z9wdzsxzdk7ka0g2gr3l460e0slaea563zll3hdfqwqxdta
+          - age100tc6lnl96420a8tm65g0cdje80uec74pjpsnurkl8yy5lyjefkssuelru
   - path_regex: cluster/.*\.sops\.ini
     key_groups:
       - age:
-          - age15uzrw396e67z9wdzsxzdk7ka0g2gr3l460e0slaea563zll3hdfqwqxdta
+          - age100tc6lnl96420a8tm65g0cdje80uec74pjpsnurkl8yy5lyjefkssuelru
   - path_regex: cluster/.*\.sops\.toml
     key_groups:
       - age:
-          - age15uzrw396e67z9wdzsxzdk7ka0g2gr3l460e0slaea563zll3hdfqwqxdta
+          - age100tc6lnl96420a8tm65g0cdje80uec74pjpsnurkl8yy5lyjefkssuelru
