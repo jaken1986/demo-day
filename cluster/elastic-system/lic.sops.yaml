@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: eck-trial-license
+    namespace: elastic-system
+    labels:
+        license.k8s.elastic.co/type: enterprise_trial
+    annotations:
+        elastic.co/eula: accepted
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1pll58t9vdaw5q0nh89mfxjdu099jyh5dkr9m5gy46fwyr5w25upqs8sfge
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSByTDg0R3NvQTdqMVgvZjda
+            ekp3V2FSVmFvRFh4cmpYMThIM1Z4VUZPYlhNCnYwdnc3VWh1TmZBOWxuT3FGbmZX
+            UUpiZE1CcmJvNjQyRnhLcDBnUGtJMGMKLS0tIDFpNHZsT1NUQTFNZ2hFVlowd1JJ
+            Q3dIYWk4ejJ4OStFV3pPRU5NWElXOW8K2X0DPoLOhFLPecSrekw4Duc4XppkVnhu
+            Pil68D8v+LPVAel66gT/qWsiGEt0G8V77TjQEXgkbHAKnZgQHUbQ5Q==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-09-22T11:32:50Z"
+    mac: ENC[AES256_GCM,data:ks5P54Wew5CAfNUyAeGT+W5ES1ZgPMytk6v/+CPIZ/ylBAKgemZe5pNLsc+yvWWirr+yZ1uiopIPjlIPXLSEGIajd74gqtfOzRMXcW11Kr3l++fHy6Itge1mWcsGTpg8r2m0NHNLaUdB5wsX7OiGKNaVfFSxpft+373WaEPIFX0=,iv:MQkwHUzTTIDPDeQ++36mfuk5wSZI/Pd/yzQ8ZRj0p6s=,tag:ut0cCUX3j+wrIz/yc/NG/A==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3

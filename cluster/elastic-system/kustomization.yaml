@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
   # renovate: datasource=docker image=docker.elastic.co/eck/eck-operator
   - https://download.elastic.co/downloads/eck/2.4.0/operator.yaml
+  - lic.sops.yaml
