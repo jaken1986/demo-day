@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
   - cattle-system
   - default
+  - elastic-system
   - k3os-system
   - kube-system
   - networking
