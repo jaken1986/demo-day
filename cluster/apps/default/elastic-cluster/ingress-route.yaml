@@ -8,7 +8,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: "Host(`kibana.${SECRET_DOMAIN`)"
+    - match: "Host(`kibana.${SECRET_DOMAIN}`)"
       kind: Rule
       services:
         - name: bergeys-inc-kibana-kb-http
