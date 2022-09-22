@@ -5,6 +5,7 @@ resources:
   - bitnami.yaml
   - bjw-s.yaml
   - dynu.yaml
+  - gitea-charts.yaml
   - jetstack.yaml
   - k8s-at-home.yaml
   - metrics-server.yaml
