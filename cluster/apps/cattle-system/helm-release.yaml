@@ -27,3 +27,8 @@ spec:
     hostname: rancher.${SECRET_DOMAIN}
     replicas: 1
     bootstrapPassword: admin
+    ingress:
+      extraAnnotations:
+        cert-manager.io/cluster-issuer: "letsencrypt-dynu-production"
+      tls:
+        source: secret
