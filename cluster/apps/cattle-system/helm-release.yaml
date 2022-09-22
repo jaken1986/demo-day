@@ -1,0 +1,29 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: rancher
+  namespace: cattle-system
+spec:
+  interval: 15m
+  chart:
+    spec:
+      chart: rancher
+      sourceRef:
+        kind: HelmRepository
+        name: rancher-latest
+        namespace: flux-system
+      interval: 15m
+  install:
+    remediation:
+      retries: 5
+  upgrade:
+    remediation:
+      retries: 5
+  dependsOn:
+    - name: cert-manager
+      namespace: kube-system
+  values:
+    hostname: rancher.${SECRET_DOMAIN}
+    replicas: 1
+    bootstrapPassword: admin

@@ -8,5 +8,6 @@ resources:
   - jetstack.yaml
   - k8s-at-home.yaml
   - metrics-server.yaml
+  - rancher.yaml
   - stakater.yaml
   - traefik.yaml
