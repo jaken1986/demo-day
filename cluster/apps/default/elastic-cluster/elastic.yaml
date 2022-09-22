@@ -5,7 +5,7 @@ metadata:
   name: elastic
   namespace: default
 spec:
-  version: 7.17.3
+  version: 7.17.5
   nodeSets:
     - name: elastic
       count: 3
